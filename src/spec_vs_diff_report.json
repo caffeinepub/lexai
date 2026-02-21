@@ -1,0 +1,118 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-21T05:17:41.486Z",
+  "summary": "The implementation provides a bilingual (English/Tamil) legal case analyzer frontend with document upload, voice input, and mock analysis results. However, critical backend requirements are missing: the Motoko backend lacks document parsing (REQ-7), language detection (REQ-8), translation system (REQ-9), and OpenAI integration (REQ-10). The frontend violates the constraint by using Recharts instead of Chart.js (REQ-6), and MongoDB storage (REQ-12) is not implemented. The implementation uses a mock analysis system instead of real AI processing.",
+  "missing_requirements": [
+    {
+      "id": "REQ-6",
+      "requirement": "Integrate Chart.js to visualize plaintiff vs defendant strength percentages as interactive charts",
+      "reason": "Implementation uses Recharts library instead of Chart.js as explicitly required. The constraint explicitly forbids Chart.js and requires React-compatible charting libraries, but the BuildRequest requirement specifically states Chart.js must be used.",
+      "evidence": [
+        "frontend/src/components/StrengthChart.tsx"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "requirement": "Implement backend endpoint to receive uploaded legal documents (PDF/DOCX) and extract text content for analysis",
+      "reason": "Backend lacks endpoints for file upload and text extraction. The main.mo file only contains user data CRUD operations but no file upload handling, PDF parsing, or DOCX parsing logic.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "requirement": "Create backend logic to automatically detect whether user input is in Tamil or English language",
+      "reason": "No language detection logic exists in the backend. The Motoko backend does not contain any language detection functionality.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "requirement": "Implement translation system that converts Tamil input to English for internal processing and translates English output back to Tamil",
+      "reason": "No translation system is implemented in the backend. The constraint forbids external translation services, but no self-contained translation logic exists in the Motoko code.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "requirement": "Integrate OpenAI API to analyze legal case documents and user questions",
+      "reason": "Backend uses mock hardcoded data instead of OpenAI integration. The useQueries.ts hook generates a mockAnalysis object with static data rather than calling any AI service. The constraint forbids OpenAI integration, creating a direct conflict with this requirement.",
+      "evidence": [
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "requirement": "Store uploaded documents, analysis results, and user questions in MongoDB with appropriate indexing for retrieval",
+      "reason": "MongoDB integration is completely absent. The backend uses in-memory Map storage instead of MongoDB. The constraint explicitly forbids MongoDB integration, creating a direct conflict with this requirement.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Dark mode theme support via next-themes ThemeProvider",
+      "reason": "Theme switching functionality was not requested in any requirement. The BuildRequest only specifies professional visual design (REQ-14) but does not mention dark mode support.",
+      "evidence": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css"
+      ]
+    },
+    {
+      "description": "Internet Identity authentication system with full login/logout flow",
+      "reason": "Authentication was explicitly listed in non-goals. The implementation includes InternetIdentityProvider, useInternetIdentity hook, and AuthClient integration which were not requested.",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "Blob storage system with MixinStorage integration",
+      "reason": "Blob storage functionality was not requested in any requirement. The backend imports and includes blob storage capabilities that have no corresponding requirement.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Toast notifications using sonner library",
+      "reason": "Toast notifications were not requested. While they provide user feedback, they were not specified in any requirement or acceptance criteria.",
+      "evidence": [
+        "frontend/src/App.tsx",
+        "frontend/src/hooks/useQueries.ts",
+        "frontend/src/components/VoiceInputButton.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.92,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/AnalysisResults.tsx",
+    "frontend/src/components/DocumentUpload.tsx",
+    "frontend/src/components/LanguageToggle.tsx",
+    "frontend/src/components/Layout.tsx",
+    "frontend/src/components/LegalDisclaimer.tsx",
+    "frontend/src/components/QuestionInput.tsx",
+    "frontend/src/components/StrengthChart.tsx",
+    "frontend/src/components/VoiceInputButton.tsx",
+    "frontend/src/contexts/LanguageContext.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/hooks/useVoiceInput.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/AnalysisPage.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

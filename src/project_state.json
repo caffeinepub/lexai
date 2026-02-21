@@ -1,0 +1,194 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Full-stack AI-powered legal-tech web application called LexAI that analyzes legal case documents in Tamil and English, providing structured analysis including case summaries, legal issues, law sections, evidence evaluation, strength assessments for plaintiff/defendant, risk analysis, and neutral opinions with proper disclaimers.",
+  "architectural_notes": [
+    "Full-stack architecture: React.js frontend + Python FastAPI backend",
+    "AI-powered analysis using OpenAI API for legal document processing",
+    "Bilingual support (Tamil/English) with automatic language detection via Langdetect",
+    "Translation pipeline using Googletrans for maintaining legal context",
+    "Document parsing with PyPDF2 for PDF/DOCX file processing",
+    "MongoDB for data persistence",
+    "Chart.js for visual representation of strength percentages and risk levels",
+    "Structured JSON API responses with 11 analysis components",
+    "Voice input integration for accessibility",
+    "Safety-first approach: probability estimation only, no final verdicts, mandatory disclaimers"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Professional legal scales of justice icon for application logo (logo-scales.dim_256x256.png)\n- Modern legal document illustration for upload placeholder (document-placeholder.dim_400x300.png)\n- Tamil language flag icon for language toggle (flag-tamil.dim_64x64.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-document-upload-interface-that-accepts-pdf-and-docx-files-for-legal-case-analysis",
+      "title": "Create a document upload interface that accepts PDF and DOCX files for legal case analysis",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-language-toggle-between-english-and-tamil-throughout-the-application-interface",
+      "title": "Implement language toggle between English and Tamil (தமிழ்) throughout the application interface",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-text-input-field-for-users-to-ask-legal-questions-in-tamil-or-english",
+      "title": "Create text input field for users to ask legal questions in Tamil or English",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-voice-input-capability-that-records-and-converts-tamil-or-english-speech-to-text-for-legal-questions",
+      "title": "Add voice input capability that records and converts Tamil or English speech to text for legal questions",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-structured-legal-analysis-results-with-all-11-components-case-summary-legal-issues-law-sections-evidence-evaluation-plaintiff-strength-defendant-strength-strong-points-weak-points-risk-assessment-neutral-opinion-and-legal-disclaimer",
+      "title": "Display structured legal analysis results with all 11 components: Case Summary, Legal Issues, Law Sections, Evidence Evaluation, Plaintiff Strength (%), Defendant Strength (%), Strong Points, Weak Points, Risk Assessment, Neutral Opinion, and Legal Disclaimer",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-integrate-chart-js-to-visualize-plaintiff-vs-defendant-strength-percentages-as-interactive-charts",
+      "title": "Integrate Chart.js to visualize plaintiff vs defendant strength percentages as interactive charts",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-include-prominent-legal-disclaimer-in-all-analysis-outputs-stating-that-the-system-does-not-act-as-a-real-judge-does-not-provide-final-verdicts-only-offers-probability-estimations-and-users-should-consult-qualified-legal-professionals",
+      "title": "Include prominent legal disclaimer in all analysis outputs stating that the system does not act as a real judge, does not provide final verdicts, only offers probability estimations, and users should consult qualified legal professionals",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-professional-legal-tech-interface-with-a-clean-trustworthy-visual-theme-using-sophisticated-colors-clear-typography-and-structured-layouts-that-inspire-confidence-while-maintaining-accessibility",
+      "title": "Design a professional legal-tech interface with a clean, trustworthy visual theme using sophisticated colors, clear typography, and structured layouts that inspire confidence while maintaining accessibility",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Document upload system supporting PDF and DOCX files",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Bilingual input support with automatic Tamil/English language detection",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Voice input capability for Tamil and English",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "AI-powered legal case analysis generating structured output with 11 analysis components",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Language translation system maintaining legal meaning between Tamil and English",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Frontend with React.js, Tailwind CSS, Chart.js, and language toggle UI",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Backend API with FastAPI, OpenAI integration, PyPDF2, Langdetect, Googletrans, and MongoDB",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Structured JSON output with plaintiff/defendant strength percentages and risk assessment",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Legal disclaimer system emphasizing probability estimation over final verdicts",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Implement backend endpoint to receive uploaded legal documents (PDF/DOCX) and extract text content for analysis",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Create backend logic to automatically detect whether user input is in Tamil or English language",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Implement translation system that converts Tamil input to English for internal processing and translates English output back to Tamil when Tamil language is selected, preserving legal terminology accuracy",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Integrate OpenAI API to analyze legal case documents and user questions, generating structured legal analysis with case summary, legal issues, law sections, evidence evaluation, plaintiff/defendant strengths, strong/weak points, risk assessment, and neutral opinion",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Structure backend response as JSON with fields: summary, legal_issues (array), law_sections (array), plaintiff_strength (percentage string), defendant_strength (percentage string), strong_points (array), weak_points (array), risk_level (string), and disclaimer (string)",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Store uploaded documents, analysis results, and user questions in MongoDB with appropriate indexing for retrieval",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "LexAI",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

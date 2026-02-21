@@ -1,0 +1,170 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-document-upload-interface-that-accepts-pdf-and-docx-files-for-legal-case-analysis",
+      "featureTitle": "Create a document upload interface that accepts PDF and DOCX files for legal case analysis",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/DocumentUpload.tsx",
+        "frontend/src/pages/AnalysisPage.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-language-toggle-between-english-and-tamil-throughout-the-application-interface",
+      "featureTitle": "Implement language toggle between English and Tamil (தமிழ்) throughout the application interface",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/LanguageToggle.tsx",
+        "frontend/src/contexts/LanguageContext.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-text-input-field-for-users-to-ask-legal-questions-in-tamil-or-english",
+      "featureTitle": "Create text input field for users to ask legal questions in Tamil or English",
+      "files": [
+        "frontend/src/components/QuestionInput.tsx",
+        "frontend/src/pages/AnalysisPage.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-voice-input-capability-that-records-and-converts-tamil-or-english-speech-to-text-for-legal-questions",
+      "featureTitle": "Add voice input capability that records and converts Tamil or English speech to text for legal questions",
+      "files": [
+        "frontend/src/components/QuestionInput.tsx",
+        "frontend/src/components/VoiceInputButton.tsx",
+        "frontend/src/hooks/useVoiceInput.ts"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-display-structured-legal-analysis-results-with-all-11-components-case-summary-legal-issues-law-sections-evidence-evaluation-plaintiff-strength-defendant-strength-strong-points-weak-points-risk-assessment-neutral-opinion-and-legal-disclaimer",
+      "featureTitle": "Display structured legal analysis results with all 11 components: Case Summary, Legal Issues, Law Sections, Evidence Evaluation, Plaintiff Strength (%), Defendant Strength (%), Strong Points, Weak Points, Risk Assessment, Neutral Opinion, and Legal Disclaimer",
+      "files": [
+        "frontend/src/components/AnalysisResults.tsx",
+        "frontend/src/pages/AnalysisPage.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-integrate-chart-js-to-visualize-plaintiff-vs-defendant-strength-percentages-as-interactive-charts",
+      "featureTitle": "Integrate Chart.js to visualize plaintiff vs defendant strength percentages as interactive charts",
+      "files": [
+        "frontend/src/components/AnalysisResults.tsx",
+        "frontend/src/components/StrengthChart.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-include-prominent-legal-disclaimer-in-all-analysis-outputs-stating-that-the-system-does-not-act-as-a-real-judge-does-not-provide-final-verdicts-only-offers-probability-estimations-and-users-should-consult-qualified-legal-professionals",
+      "featureTitle": "Include prominent legal disclaimer in all analysis outputs stating that the system does not act as a real judge, does not provide final verdicts, only offers probability estimations, and users should consult qualified legal professionals",
+      "files": [
+        "frontend/src/components/AnalysisResults.tsx",
+        "frontend/src/components/LegalDisclaimer.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-design-a-professional-legal-tech-interface-with-a-clean-trustworthy-visual-theme-using-sophisticated-colors-clear-typography-and-structured-layouts-that-inspire-confidence-while-maintaining-accessibility",
+      "featureTitle": "Design a professional legal-tech interface with a clean, trustworthy visual theme using sophisticated colors, clear typography, and structured layouts that inspire confidence while maintaining accessibility",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

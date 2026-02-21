@@ -1,0 +1,323 @@
+{
+  "kind": "build_request",
+  "title": "Build LexAI legal case analyzer with Tamil/English support",
+  "projectName": "LexAI",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a document upload interface that accepts PDF and DOCX files for legal case analysis",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Users can upload legal case documents (PDF/DOCX)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "User can select and upload PDF files",
+        "User can select and upload DOCX files",
+        "Upload interface shows file name and size after selection",
+        "Clear error messages for unsupported file types"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement language toggle between English and Tamil (தமிழ்) throughout the application interface",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Language toggle (English / தமிழ்)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Toggle button switches between English and Tamil labels",
+        "All UI text updates when language is changed",
+        "Language preference persists during session",
+        "Toggle is visible and accessible on all screens"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create text input field for users to ask legal questions in Tamil or English",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "ask questions in Tamil or English (text or voice)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Text input accepts both Tamil and English characters",
+        "Input field is clearly labeled",
+        "Submit button triggers analysis",
+        "Input validation prevents empty submissions"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add voice input capability that records and converts Tamil or English speech to text for legal questions",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "ask questions in Tamil or English (text or voice)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Microphone button starts voice recording",
+        "Visual feedback shows recording in progress",
+        "Recorded speech converts to text in input field",
+        "Supports both Tamil and English voice input"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Display structured legal analysis results with all 11 components: Case Summary, Legal Issues, Law Sections, Evidence Evaluation, Plaintiff Strength (%), Defendant Strength (%), Strong Points, Weak Points, Risk Assessment, Neutral Opinion, and Legal Disclaimer",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "receive structured legal analysis including: 1. Case Summary 2. Legal Issues 3. Law Sections 4. Evidence Evaluation 5. Plaintiff Strength (%) 6. Defendant Strength (%) 7. Strong Points 8. Weak Points 9. Risk Assessment 10. Neutral Opinion 11. Legal Disclaimer"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All 11 analysis components are displayed in organized sections",
+        "Case Summary appears as readable text",
+        "Legal Issues, Law Sections, Strong Points, and Weak Points render as lists",
+        "Plaintiff and Defendant strengths show as percentages",
+        "Risk Assessment displays clearly with appropriate styling",
+        "Legal Disclaimer is prominently visible at the bottom"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Integrate Chart.js to visualize plaintiff vs defendant strength percentages as interactive charts",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Chart.js",
+          "Plaintiff Strength (%)",
+          "Defendant Strength (%)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Visual chart displays plaintiff and defendant strength percentages",
+        "Chart updates dynamically based on analysis results",
+        "Chart is responsive and clearly labeled",
+        "Chart type is appropriate for percentage comparison (e.g., pie, bar, or donut chart)"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Implement backend endpoint to receive uploaded legal documents (PDF/DOCX) and extract text content for analysis",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Users can upload legal case documents (PDF/DOCX)",
+          "PyPDF2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Endpoint accepts multipart/form-data file uploads",
+        "PDF files are parsed and text content extracted",
+        "DOCX files are parsed and text content extracted",
+        "Extracted text is stored for subsequent analysis",
+        "Error handling for corrupted or unreadable files"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Create backend logic to automatically detect whether user input is in Tamil or English language",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Detect Tamil or English automatically",
+          "Langdetect"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Language detection runs on all text and voice inputs",
+        "Tamil language is correctly identified",
+        "English language is correctly identified",
+        "Detection result determines translation flow"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Implement translation system that converts Tamil input to English for internal processing and translates English output back to Tamil when Tamil language is selected, preserving legal terminology accuracy",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Translate Tamil to English internally",
+          "Translate output back to Tamil if selected",
+          "Maintain legal meaning during translation",
+          "Googletrans"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Tamil user questions are translated to English before analysis",
+        "English analysis results are translated back to Tamil when Tamil is selected",
+        "Legal terms maintain accurate meaning through translation",
+        "Translation handles complex legal phrases appropriately"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Integrate OpenAI API to analyze legal case documents and user questions, generating structured legal analysis with case summary, legal issues, law sections, evidence evaluation, plaintiff/defendant strengths, strong/weak points, risk assessment, and neutral opinion",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "OpenAI API",
+          "receive structured legal analysis including: 1. Case Summary 2. Legal Issues 3. Law Sections 4. Evidence Evaluation 5. Plaintiff Strength (%) 6. Defendant Strength (%) 7. Strong Points 8. Weak Points 9. Risk Assessment 10. Neutral Opinion"
+        ]
+      },
+      "acceptanceCriteria": [
+        "OpenAI API processes document content and user questions",
+        "AI generates case summary in natural language",
+        "AI identifies relevant legal issues as a list",
+        "AI extracts applicable law sections",
+        "AI evaluates evidence quality and relevance",
+        "AI calculates plaintiff strength percentage",
+        "AI calculates defendant strength percentage",
+        "AI lists strong points for the case",
+        "AI lists weak points for the case",
+        "AI provides risk level assessment",
+        "AI gives neutral, balanced opinion without bias"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Structure backend response as JSON with fields: summary, legal_issues (array), law_sections (array), plaintiff_strength (percentage string), defendant_strength (percentage string), strong_points (array), weak_points (array), risk_level (string), and disclaimer (string)",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Return structured JSON like: { \"summary\": \"\", \"legal_issues\": [], \"law_sections\": [], \"plaintiff_strength\": \"65%\", \"defendant_strength\": \"35%\", \"strong_points\": [], \"weak_points\": [], \"risk_level\": \"\", \"disclaimer\": \"\" }"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Response follows exact JSON structure specified",
+        "All required fields are present in response",
+        "Arrays contain string elements",
+        "Percentage fields include '%' symbol",
+        "JSON is valid and parseable by frontend"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Store uploaded documents, analysis results, and user questions in MongoDB with appropriate indexing for retrieval",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "MongoDB"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Documents are saved with metadata (upload date, file name, file type)",
+        "Analysis results are stored and linked to documents",
+        "User questions are logged with timestamps",
+        "Database schema supports efficient querying",
+        "Data persistence survives server restarts"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Include prominent legal disclaimer in all analysis outputs stating that the system does not act as a real judge, does not provide final verdicts, only offers probability estimations, and users should consult qualified legal professionals",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "SAFETY: - Do NOT act as real judge - Do NOT give final verdict - Only probability estimation - Always show disclaimer"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Disclaimer text appears on every analysis result",
+        "Disclaimer clearly states limitations of AI analysis",
+        "Disclaimer emphasizes probability-based nature of output",
+        "Disclaimer recommends consulting legal professionals",
+        "Disclaimer is visually distinct and easily readable",
+        "Disclaimer is included in JSON response and rendered on frontend"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Design a professional legal-tech interface with a clean, trustworthy visual theme using sophisticated colors, clear typography, and structured layouts that inspire confidence while maintaining accessibility",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Color scheme conveys professionalism and authority appropriate for legal services",
+        "Typography is clear and readable for legal text",
+        "Layout provides logical flow from document upload through analysis display",
+        "Design builds user trust while maintaining modern aesthetics",
+        "Consistent styling across all screens and components"
+      ]
+    }
+  ],
+  "constraints": [
+    "Backend must use Motoko only, not Python FastAPI",
+    "Do not integrate with external databases like MongoDB",
+    "Do not integrate with OpenAI API or other third-party AI services",
+    "Do not implement real-time WebSocket features",
+    "Voice input must work within browser capabilities without external speech APIs",
+    "Translation must not rely on external services like Google Translate API",
+    "Analysis logic must be self-contained within the Motoko backend",
+    "Do not use Chart.js; use React-compatible charting libraries or custom SVG visualizations"
+  ],
+  "nonGoals": [
+    "Integration with actual legal databases or case law repositories",
+    "Real-time collaboration features between multiple users",
+    "Email or SMS notifications for analysis completion",
+    "Mobile native applications (React Native or Flutter)",
+    "Authentication via third-party providers (OAuth, Auth0)",
+    "Payment processing for premium features",
+    "Export to PDF or Word document formats",
+    "Historical case analysis tracking across multiple sessions",
+    "Admin dashboard for managing users or documents"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Professional legal scales of justice icon for application logo (logo-scales.dim_256x256.png)",
+      "Modern legal document illustration for upload placeholder (document-placeholder.dim_400x300.png)",
+      "Tamil language flag icon for language toggle (flag-tamil.dim_64x64.png)"
+    ],
+    "edits": []
+  }
+}

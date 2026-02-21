@@ -1,0 +1,293 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-21T05:17:41.489Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 14,
+    "implemented": 8,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Create a document upload interface that accepts PDF and DOCX files for legal case analysis",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/DocumentUpload.tsx",
+          "frontend/src/pages/AnalysisPage.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/DocumentUpload.tsx",
+          "frontend/src/pages/AnalysisPage.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-10",
+        "summary": "Integrate OpenAI API to analyze legal case documents and user questions, generating structured legal analysis with case summary, legal issues, law sections, evidence evaluation, plaintiff/defendant strengths, strong/weak points, risk assessment, and neutral opinion",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-11",
+        "summary": "Structure backend response as JSON with fields: summary, legal_issues (array), law_sections (array), plaintiff_strength (percentage string), defendant_strength (percentage string), strong_points (array), weak_points (array), risk_level (string), and disclaimer (string)",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Store uploaded documents, analysis results, and user questions in MongoDB with appropriate indexing for retrieval",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-13",
+        "summary": "Include prominent legal disclaimer in all analysis outputs stating that the system does not act as a real judge, does not provide final verdicts, only offers probability estimations, and users should consult qualified legal professionals",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/LegalDisclaimer.tsx",
+          "frontend/src/components/AnalysisResults.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/LegalDisclaimer.tsx",
+          "frontend/src/components/AnalysisResults.tsx"
+        ]
+      },
+      {
+        "id": "REQ-14",
+        "summary": "Design a professional legal-tech interface with a clean, trustworthy visual theme using sophisticated colors, clear typography, and structured layouts that inspire confidence while maintaining accessibility",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/App.tsx",
+          "frontend/public/assets/generated/logo-scales.dim_256x256.png",
+          "frontend/public/assets/generated/document-placeholder.dim_400x300.png",
+          "frontend/public/assets/generated/flag-tamil.dim_64x64.png"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/App.tsx",
+          "frontend/public/assets/generated/logo-scales.dim_256x256.png",
+          "frontend/public/assets/generated/document-placeholder.dim_400x300.png",
+          "frontend/public/assets/generated/flag-tamil.dim_64x64.png"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Implement language toggle between English and Tamil (தமிழ்) throughout the application interface",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/contexts/LanguageContext.tsx",
+          "frontend/src/components/LanguageToggle.tsx",
+          "frontend/src/locales/translations.ts",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/contexts/LanguageContext.tsx",
+          "frontend/src/components/LanguageToggle.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Create text input field for users to ask legal questions in Tamil or English",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/QuestionInput.tsx",
+          "frontend/src/pages/AnalysisPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/QuestionInput.tsx",
+          "frontend/src/pages/AnalysisPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Add voice input capability that records and converts Tamil or English speech to text for legal questions",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useVoiceInput.ts",
+          "frontend/src/components/VoiceInputButton.tsx",
+          "frontend/src/components/QuestionInput.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/hooks/useVoiceInput.ts",
+          "frontend/src/components/VoiceInputButton.tsx",
+          "frontend/src/components/QuestionInput.tsx"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Display structured legal analysis results with all 11 components: Case Summary, Legal Issues, Law Sections, Evidence Evaluation, Plaintiff Strength (%), Defendant Strength (%), Strong Points, Weak Points, Risk Assessment, Neutral Opinion, and Legal Disclaimer",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/AnalysisResults.tsx",
+          "frontend/src/pages/AnalysisPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/AnalysisResults.tsx",
+          "frontend/src/pages/AnalysisPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Integrate Chart.js to visualize plaintiff vs defendant strength percentages as interactive charts",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/StrengthChart.tsx",
+          "frontend/src/components/AnalysisResults.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/StrengthChart.tsx",
+          "frontend/src/components/AnalysisResults.tsx"
+        ]
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Implement backend endpoint to receive uploaded legal documents (PDF/DOCX) and extract text content for analysis",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Create backend logic to automatically detect whether user input is in Tamil or English language",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Implement translation system that converts Tamil input to English for internal processing and translates English output back to Tamil when Tamil language is selected, preserving legal terminology accuracy",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/blob-storage/Mixin.mo",
+    "backend/blob-storage/Storage.mo",
+    "backend/main.mo",
+    "build-request.json",
+    "build-template/Dockerfile",
+    "build-template/LICENSE",
+    "build-template/README.md",
+    "build-template/deploy.sh",
+    "build-template/icp.yaml",
+    "build-template/package.json",
+    "build-template/pnpm-lock.yaml",
+    "build-template/pnpm-workspace.yaml",
+    "build-template/scripts/prune-unused-images.js",
+    "build-template/scripts/resize-images.js",
+    "build-template/src/backend/canister.yaml",
+    "build-template/src/backend/system-idl/aaaaa-aa.did",
+    "build-template/src/frontend/canister.yaml",
+    "build-template/src/frontend/components.json",
+    "build-template/src/frontend/env.json",
+    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
+    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
+    "build-template/src/frontend/eslint.config.js",
+    "build-template/src/frontend/package.json",
+    "build-template/src/frontend/postcss.config.js",
+    "build-template/src/frontend/src/components/ui/accordion.tsx",
+    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
+    "build-template/src/frontend/src/components/ui/alert.tsx",
+    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
+    "build-template/src/frontend/src/components/ui/avatar.tsx",
+    "build-template/src/frontend/src/components/ui/badge.tsx",
+    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
+    "build-template/src/frontend/src/components/ui/button.tsx",
+    "build-template/src/frontend/src/components/ui/calendar.tsx",
+    "build-template/src/frontend/src/components/ui/card.tsx",
+    "build-template/src/frontend/src/components/ui/carousel.tsx",
+    "build-template/src/frontend/src/components/ui/chart.tsx",
+    "build-template/src/frontend/src/components/ui/checkbox.tsx",
+    "build-template/src/frontend/src/components/ui/collapsible.tsx",
+    "build-template/src/frontend/src/components/ui/command.tsx",
+    "build-template/src/frontend/src/components/ui/context-menu.tsx",
+    "build-template/src/frontend/src/components/ui/dialog.tsx",
+    "build-template/src/frontend/src/components/ui/drawer.tsx",
+    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
+    "build-template/src/frontend/src/components/ui/form.tsx",
+    "build-template/src/frontend/src/components/ui/hover-card.tsx",
+    "build-template/src/frontend/src/components/ui/input-otp.tsx",
+    "build-template/src/frontend/src/components/ui/input.tsx",
+    "build-template/src/frontend/src/components/ui/label.tsx",
+    "build-template/src/frontend/src/components/ui/menubar.tsx",
+    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
+    "build-template/src/frontend/src/components/ui/pagination.tsx",
+    "build-template/src/frontend/src/components/ui/popover.tsx",
+    "build-template/src/frontend/src/components/ui/progress.tsx",
+    "build-template/src/frontend/src/components/ui/radio-group.tsx",
+    "build-template/src/frontend/src/components/ui/resizable.tsx",
+    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
+    "build-template/src/frontend/src/components/ui/select.tsx",
+    "build-template/src/frontend/src/components/ui/separator.tsx",
+    "build-template/src/frontend/src/components/ui/sheet.tsx",
+    "build-template/src/frontend/src/components/ui/sidebar.tsx",
+    "build-template/src/frontend/src/components/ui/skeleton.tsx",
+    "build-template/src/frontend/src/components/ui/slider.tsx",
+    "build-template/src/frontend/src/components/ui/sonner.tsx",
+    "build-template/src/frontend/src/components/ui/switch.tsx",
+    "build-template/src/frontend/src/components/ui/table.tsx",
+    "build-template/src/frontend/src/components/ui/tabs.tsx",
+    "build-template/src/frontend/src/components/ui/textarea.tsx",
+    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
+    "build-template/src/frontend/src/components/ui/toggle.tsx",
+    "build-template/src/frontend/src/components/ui/tooltip.tsx",
+    "build-template/src/frontend/src/hooks/use-mobile.tsx",
+    "build-template/src/frontend/src/lib/utils.ts",
+    "build-template/src/frontend/tsconfig.json",
+    "build-template/src/frontend/vite.config.js",
+    "build-template/tsconfig.json",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/public/assets/generated/document-placeholder.dim_400x300.png",
+    "frontend/public/assets/generated/flag-tamil.dim_64x64.png",
+    "frontend/public/assets/generated/logo-scales.dim_256x256.png",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/AnalysisResults.tsx",
+    "frontend/src/components/DocumentUpload.tsx",
+    "frontend/src/components/LanguageToggle.tsx",
+    "frontend/src/components/Layout.tsx",
+    "frontend/src/components/LegalDisclaimer.tsx",
+    "frontend/src/components/QuestionInput.tsx",
+    "frontend/src/components/StrengthChart.tsx",
+    "frontend/src/components/VoiceInputButton.tsx",
+    "frontend/src/config.ts",
+    "frontend/src/contexts/LanguageContext.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/hooks/useVoiceInput.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/AnalysisPage.tsx",
+    "frontend/src/ui-summary.json",
+    "frontend/src/utils/StorageClient.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

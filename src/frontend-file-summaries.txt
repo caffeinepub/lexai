@@ -1,0 +1,17 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, theme provider, language provider, and layout wrapper for the analysis page.",
+  "frontend/src/contexts/LanguageContext.tsx": "React context providing bilingual support (English/Tamil) with session storage persistence and translation lookup functionality.",
+  "frontend/src/components/Layout.tsx": "Application layout component with header containing logo and language toggle, main content area, and footer with attribution.",
+  "frontend/src/components/LanguageToggle.tsx": "Toggle button component for switching between English and Tamil languages with visual feedback.",
+  "frontend/src/pages/AnalysisPage.tsx": "Main analysis page integrating document upload, question input, and results display with state management for the analysis workflow.",
+  "frontend/src/components/DocumentUpload.tsx": "File upload component supporting PDF and DOCX files with validation, progress tracking, and visual feedback.",
+  "frontend/src/components/QuestionInput.tsx": "Text input component with textarea for legal questions, integrated voice input button, and analyze submission button.",
+  "frontend/src/components/VoiceInputButton.tsx": "Voice recording button component using Web Speech API with visual feedback for recording state.",
+  "frontend/src/hooks/useVoiceInput.ts": "Custom hook implementing Web Speech Recognition API for Tamil and English voice input with transcript capture.",
+  "frontend/src/components/AnalysisResults.tsx": "Comprehensive results display component showing all 11 analysis sections with organized cards and visual hierarchy.",
+  "frontend/src/components/StrengthChart.tsx": "Bar chart visualization component using Recharts to display plaintiff vs defendant strength percentages.",
+  "frontend/src/components/LegalDisclaimer.tsx": "Prominent disclaimer alert component displaying legal warnings about AI analysis limitations.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for backend integration with mutation for case analysis and mock data generation.",
+  "frontend/src/index.css": "Global styles with professional legal-tech OKLCH color system for light and dark modes with blue-based palette.",
+  "frontend/tailwind.config.js": "Tailwind configuration with custom legal-tech color palette, professional fonts, and extended design tokens."
+}
